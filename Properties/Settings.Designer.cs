@@ -58,5 +58,17 @@ namespace aionHUD.Properties {
                 this["BackgroundColor"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool BrokerChecked {
+            get {
+                return ((bool)(this["BrokerChecked"]));
+            }
+            set {
+                this["BrokerChecked"] = value;
+            }
+        }
     }
 }

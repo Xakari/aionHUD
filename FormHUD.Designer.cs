@@ -30,9 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(aionHUD));
-            this.panelMove = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelBG = new System.Windows.Forms.Panel();
+            this.buttonConsoleDown = new System.Windows.Forms.Button();
+            this.buttonConsoleUP = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonMove = new System.Windows.Forms.Button();
             this.labelCurrentRank = new System.Windows.Forms.Label();
             this.buttonClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,50 +72,29 @@
             this.resizeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemResize75 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemResize100 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItemresize110 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemResize110 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemResize125 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemResize150 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemResize175 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemResize200 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panelMove.SuspendLayout();
+            this.toolStripMenuItemMarket = new System.Windows.Forms.ToolStripMenuItem();
+            this.yesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.noToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelBG.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panelMove
-            // 
-            this.panelMove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
-            this.panelMove.Controls.Add(this.label5);
-            this.panelMove.Controls.Add(this.label1);
-            this.panelMove.Location = new System.Drawing.Point(2, 0);
-            this.panelMove.Name = "panelMove";
-            this.panelMove.Size = new System.Drawing.Size(424, 23);
-            this.panelMove.TabIndex = 34;
-            this.panelMove.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMove_Paint);
-            this.panelMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseDown);
-            this.panelMove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseMove);
-            this.panelMove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panelMove_MouseUp);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Enabled = false;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(212, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Move";
             // 
             // panelBG
             // 
             this.panelBG.AutoSize = true;
             this.panelBG.BackColor = System.Drawing.Color.SlateGray;
             this.panelBG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBG.Controls.Add(this.buttonConsoleDown);
+            this.panelBG.Controls.Add(this.buttonConsoleUP);
+            this.panelBG.Controls.Add(this.label1);
+            this.panelBG.Controls.Add(this.buttonMove);
             this.panelBG.Controls.Add(this.labelCurrentRank);
-            this.panelBG.Controls.Add(this.panelMove);
             this.panelBG.Controls.Add(this.buttonClose);
             this.panelBG.Controls.Add(this.label3);
             this.panelBG.Controls.Add(this.labelTTRU);
@@ -142,17 +123,83 @@
             this.panelBG.Controls.Add(this.label11);
             this.panelBG.Controls.Add(this.labelEXP);
             this.panelBG.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.panelBG.Location = new System.Drawing.Point(9, 12);
+            this.panelBG.Location = new System.Drawing.Point(3, 6);
             this.panelBG.Name = "panelBG";
-            this.panelBG.Size = new System.Drawing.Size(468, 442);
+            this.panelBG.Size = new System.Drawing.Size(469, 446);
             this.panelBG.TabIndex = 33;
+            this.panelBG.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBG_Paint);
+            // 
+            // buttonConsoleDown
+            // 
+            this.buttonConsoleDown.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonConsoleDown.Enabled = false;
+            this.buttonConsoleDown.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonConsoleDown.FlatAppearance.BorderSize = 2;
+            this.buttonConsoleDown.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
+            this.buttonConsoleDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConsoleDown.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.buttonConsoleDown.ForeColor = System.Drawing.Color.White;
+            this.buttonConsoleDown.Location = new System.Drawing.Point(431, 194);
+            this.buttonConsoleDown.Name = "buttonConsoleDown";
+            this.buttonConsoleDown.Size = new System.Drawing.Size(30, 28);
+            this.buttonConsoleDown.TabIndex = 43;
+            this.buttonConsoleDown.Text = "\\/";
+            this.buttonConsoleDown.UseVisualStyleBackColor = false;
+            this.buttonConsoleDown.Click += new System.EventHandler(this.buttonConsoleDown_Click);
+            // 
+            // buttonConsoleUP
+            // 
+            this.buttonConsoleUP.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonConsoleUP.Enabled = false;
+            this.buttonConsoleUP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonConsoleUP.FlatAppearance.BorderSize = 2;
+            this.buttonConsoleUP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
+            this.buttonConsoleUP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonConsoleUP.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.buttonConsoleUP.ForeColor = System.Drawing.Color.White;
+            this.buttonConsoleUP.Location = new System.Drawing.Point(395, 194);
+            this.buttonConsoleUP.Name = "buttonConsoleUP";
+            this.buttonConsoleUP.Size = new System.Drawing.Size(30, 28);
+            this.buttonConsoleUP.TabIndex = 42;
+            this.buttonConsoleUP.Text = "/\\";
+            this.buttonConsoleUP.UseVisualStyleBackColor = false;
+            this.buttonConsoleUP.Click += new System.EventHandler(this.buttonConsoleUP_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(3, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(88, 16);
+            this.label1.TabIndex = 41;
+            this.label1.Text = "aionHUD.com";
+            // 
+            // buttonMove
+            // 
+            this.buttonMove.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonMove.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonMove.FlatAppearance.BorderSize = 2;
+            this.buttonMove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
+            this.buttonMove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
+            this.buttonMove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonMove.ForeColor = System.Drawing.Color.White;
+            this.buttonMove.Location = new System.Drawing.Point(-1, -1);
+            this.buttonMove.Name = "buttonMove";
+            this.buttonMove.Size = new System.Drawing.Size(424, 23);
+            this.buttonMove.TabIndex = 40;
+            this.buttonMove.Text = "Move";
+            this.buttonMove.UseVisualStyleBackColor = false;
+            this.buttonMove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonMove_MouseDown);
+            this.buttonMove.MouseMove += new System.Windows.Forms.MouseEventHandler(this.buttonMove_MouseMove);
+            this.buttonMove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.buttonMove_MouseUp);
             // 
             // labelCurrentRank
             // 
             this.labelCurrentRank.AutoSize = true;
             this.labelCurrentRank.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.labelCurrentRank.ForeColor = System.Drawing.Color.White;
-            this.labelCurrentRank.Location = new System.Drawing.Point(64, 41);
+            this.labelCurrentRank.Location = new System.Drawing.Point(64, 47);
             this.labelCurrentRank.Name = "labelCurrentRank";
             this.labelCurrentRank.Size = new System.Drawing.Size(58, 16);
             this.labelCurrentRank.TabIndex = 39;
@@ -160,14 +207,17 @@
             // 
             // buttonClose
             // 
-            this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
-            this.buttonClose.FlatAppearance.BorderSize = 0;
+            this.buttonClose.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonClose.FlatAppearance.BorderSize = 2;
+            this.buttonClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
+            this.buttonClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.buttonClose.Font = new System.Drawing.Font("Arial", 9.75F);
             this.buttonClose.ForeColor = System.Drawing.Color.White;
-            this.buttonClose.Location = new System.Drawing.Point(429, 0);
+            this.buttonClose.Location = new System.Drawing.Point(426, -1);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(34, 23);
+            this.buttonClose.Size = new System.Drawing.Size(38, 23);
             this.buttonClose.TabIndex = 38;
             this.buttonClose.Text = "X";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -178,7 +228,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(10, 41);
+            this.label3.Location = new System.Drawing.Point(10, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 16);
             this.label3.TabIndex = 38;
@@ -304,14 +354,16 @@
             this.textBoxHUDConsole.Multiline = true;
             this.textBoxHUDConsole.Name = "textBoxHUDConsole";
             this.textBoxHUDConsole.ReadOnly = true;
-            this.textBoxHUDConsole.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxHUDConsole.Size = new System.Drawing.Size(461, 212);
+            this.textBoxHUDConsole.Size = new System.Drawing.Size(459, 212);
             this.textBoxHUDConsole.TabIndex = 31;
+            this.textBoxHUDConsole.TextChanged += new System.EventHandler(this.textBoxHUDConsole_TextChanged);
             // 
             // buttonResetAP
             // 
-            this.buttonResetAP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
-            this.buttonResetAP.FlatAppearance.BorderSize = 0;
+            this.buttonResetAP.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonResetAP.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonResetAP.FlatAppearance.BorderSize = 2;
+            this.buttonResetAP.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
             this.buttonResetAP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonResetAP.Font = new System.Drawing.Font("Arial", 9.75F);
             this.buttonResetAP.ForeColor = System.Drawing.Color.White;
@@ -419,8 +471,10 @@
             // 
             // buttonResetExpCounter
             // 
-            this.buttonResetExpCounter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
-            this.buttonResetExpCounter.FlatAppearance.BorderSize = 0;
+            this.buttonResetExpCounter.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonResetExpCounter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonResetExpCounter.FlatAppearance.BorderSize = 2;
+            this.buttonResetExpCounter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(52)))), ((int)(((byte)(59)))));
             this.buttonResetExpCounter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonResetExpCounter.Font = new System.Drawing.Font("Arial", 9.75F);
             this.buttonResetExpCounter.ForeColor = System.Drawing.Color.White;
@@ -505,11 +559,12 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItemMarket,
             this.toolStripMenuItemBGColor,
             this.resizeToolStripMenuItem,
             this.toolStripMenuItemClose});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(139, 70);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
             this.contextMenuStrip1.Text = "aionHUD";
             // 
             // toolStripMenuItemBGColor
@@ -519,28 +574,27 @@
             this.BlackToolStripMenuItem,
             this.whiteToolStripMenuItem});
             this.toolStripMenuItemBGColor.Name = "toolStripMenuItemBGColor";
-            this.toolStripMenuItemBGColor.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItemBGColor.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemBGColor.Text = "Background";
-
             // 
             // TranspToolStripMenuItem
             // 
             this.TranspToolStripMenuItem.Name = "TranspToolStripMenuItem";
-            this.TranspToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.TranspToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.TranspToolStripMenuItem.Text = "Transparent";
             this.TranspToolStripMenuItem.Click += new System.EventHandler(this.yesToolStripMenuItem_Click);
             // 
             // BlackToolStripMenuItem
             // 
             this.BlackToolStripMenuItem.Name = "BlackToolStripMenuItem";
-            this.BlackToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.BlackToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.BlackToolStripMenuItem.Text = "Black";
             this.BlackToolStripMenuItem.Click += new System.EventHandler(this.noToolStripMenuItem_Click);
             // 
             // whiteToolStripMenuItem
             // 
             this.whiteToolStripMenuItem.Name = "whiteToolStripMenuItem";
-            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.whiteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.whiteToolStripMenuItem.Text = "White";
             this.whiteToolStripMenuItem.Click += new System.EventHandler(this.whiteToolStripMenuItem_Click);
             // 
@@ -549,87 +603,102 @@
             this.resizeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItemResize75,
             this.toolStripMenuItemResize100,
-            this.toolStripMenuItemresize110,
+            this.toolStripMenuItemResize110,
             this.toolStripMenuItemResize125,
             this.toolStripMenuItemResize150,
             this.toolStripMenuItemResize175,
             this.toolStripMenuItemResize200});
             this.resizeToolStripMenuItem.Name = "resizeToolStripMenuItem";
-            this.resizeToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.resizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.resizeToolStripMenuItem.Text = "Resize";
             // 
             // toolStripMenuItemResize75
             // 
             this.toolStripMenuItemResize75.Name = "toolStripMenuItemResize75";
-            this.toolStripMenuItemResize75.Size = new System.Drawing.Size(102, 22);
+            this.toolStripMenuItemResize75.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemResize75.Text = "75%";
             this.toolStripMenuItemResize75.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
             // 
             // toolStripMenuItemResize100
             // 
             this.toolStripMenuItemResize100.Name = "toolStripMenuItemResize100";
-            this.toolStripMenuItemResize100.Size = new System.Drawing.Size(102, 22);
+            this.toolStripMenuItemResize100.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemResize100.Text = "100%";
             this.toolStripMenuItemResize100.Click += new System.EventHandler(this.toolStripMenuItemResize100_Click);
             // 
-            // toolStripMenuItemresize110
+            // toolStripMenuItemResize110
             // 
-            this.toolStripMenuItemresize110.Name = "toolStripMenuItemresize110";
-            this.toolStripMenuItemresize110.Size = new System.Drawing.Size(102, 22);
-            this.toolStripMenuItemresize110.Text = "110%";
-            this.toolStripMenuItemresize110.Click += new System.EventHandler(this.toolStripMenuItemresize110_Click);
+            this.toolStripMenuItemResize110.Name = "toolStripMenuItemResize110";
+            this.toolStripMenuItemResize110.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemResize110.Text = "110%";
+            this.toolStripMenuItemResize110.Click += new System.EventHandler(this.toolStripMenuItemresize110_Click);
             // 
             // toolStripMenuItemResize125
             // 
             this.toolStripMenuItemResize125.Name = "toolStripMenuItemResize125";
-            this.toolStripMenuItemResize125.Size = new System.Drawing.Size(102, 22);
+            this.toolStripMenuItemResize125.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemResize125.Text = "125%";
             this.toolStripMenuItemResize125.Click += new System.EventHandler(this.toolStripMenuItem3_Click);
             // 
             // toolStripMenuItemResize150
             // 
             this.toolStripMenuItemResize150.Name = "toolStripMenuItemResize150";
-            this.toolStripMenuItemResize150.Size = new System.Drawing.Size(102, 22);
+            this.toolStripMenuItemResize150.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemResize150.Text = "150%";
             this.toolStripMenuItemResize150.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
             // 
             // toolStripMenuItemResize175
             // 
             this.toolStripMenuItemResize175.Name = "toolStripMenuItemResize175";
-            this.toolStripMenuItemResize175.Size = new System.Drawing.Size(102, 22);
+            this.toolStripMenuItemResize175.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemResize175.Text = "175%";
             this.toolStripMenuItemResize175.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
             // 
             // toolStripMenuItemResize200
             // 
             this.toolStripMenuItemResize200.Name = "toolStripMenuItemResize200";
-            this.toolStripMenuItemResize200.Size = new System.Drawing.Size(102, 22);
+            this.toolStripMenuItemResize200.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemResize200.Text = "200%";
             this.toolStripMenuItemResize200.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
             // 
             // toolStripMenuItemClose
             // 
             this.toolStripMenuItemClose.Name = "toolStripMenuItemClose";
-            this.toolStripMenuItemClose.Size = new System.Drawing.Size(138, 22);
+            this.toolStripMenuItemClose.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItemClose.Text = "Close";
             this.toolStripMenuItemClose.Click += new System.EventHandler(this.toolStripMenuItemClose_Click);
             // 
-            // label5
+            // toolStripMenuItemMarket
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(7, 4);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "aionHUD.com";
+            this.toolStripMenuItemMarket.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yesToolStripMenuItem,
+            this.noToolStripMenuItem});
+            this.toolStripMenuItemMarket.Name = "toolStripMenuItemMarket";
+            this.toolStripMenuItemMarket.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItemMarket.Text = "Broker";
+            // 
+            // yesToolStripMenuItem
+            // 
+            this.yesToolStripMenuItem.Checked = true;
+            this.yesToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.yesToolStripMenuItem.Name = "yesToolStripMenuItem";
+            this.yesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.yesToolStripMenuItem.Text = "Yes";
+            this.yesToolStripMenuItem.Click += new System.EventHandler(this.yesToolStripMenuItem_Click_1);
+            // 
+            // noToolStripMenuItem
+            // 
+            this.noToolStripMenuItem.Name = "noToolStripMenuItem";
+            this.noToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.noToolStripMenuItem.Text = "No";
+            this.noToolStripMenuItem.Click += new System.EventHandler(this.noToolStripMenuItem_Click_1);
             // 
             // aionHUD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(489, 454);
+            this.ClientSize = new System.Drawing.Size(477, 454);
             this.Controls.Add(this.panelBG);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -639,8 +708,6 @@
             this.TransparencyKey = System.Drawing.Color.DarkGray;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.aionHUD_FormClosing);
             this.Load += new System.EventHandler(this.aionHUD_Load);
-            this.panelMove.ResumeLayout(false);
-            this.panelMove.PerformLayout();
             this.panelBG.ResumeLayout(false);
             this.panelBG.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -650,8 +717,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panelMove;
         private System.Windows.Forms.Panel panelBG;
         public System.Windows.Forms.Label labelTTRU;
         private System.Windows.Forms.Label label;
@@ -678,8 +743,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         public System.Windows.Forms.Label labelEXP;
-        private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelCurrentRank;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NotifyIcon aionHUDNotifyIcon;
@@ -692,12 +755,19 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemResize175;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemResize200;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemResize75;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemresize110;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemResize110;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemBGColor;
         private System.Windows.Forms.ToolStripMenuItem TranspToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem BlackToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem whiteToolStripMenuItem;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button buttonMove;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonConsoleDown;
+        private System.Windows.Forms.Button buttonConsoleUP;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemMarket;
+        private System.Windows.Forms.ToolStripMenuItem yesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem noToolStripMenuItem;
     }
 }
 
